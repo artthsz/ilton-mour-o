@@ -1,0 +1,222 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #800000;
+    color: white;
+    padding: 15px;
+    z-index: 100;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+/* Home Section */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #000; /* Fundo preto para garantir contraste */
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    width: 300%;
+    animation: carousel 15s infinite linear;
+}
+
+.carousel-image {
+    width: 33.3333%;
+    object-fit: cover;
+}
+
+.intro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Sobreposição escura para melhor contraste do texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.intro-text h1 {
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.intro-text p {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    animation: fadeInUp 2.5s ease-in-out;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+}
+
+/* Services Section */
+.servicos {
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #800000;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.servicos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.servico-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.servico-item:hover {
+    transform: translateY(-10px);
+}
+
+.servico-item h3 {
+    color: #800000;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.servico-item p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes carousel {
+    0% {
+        transform: translateX(0);
+    }
+    33.3333% {
+        transform: translateX(-100%);
+    }
+    66.6666% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
